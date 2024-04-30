@@ -21,11 +21,11 @@ object ApiRoutes {
           resp    <- Ok(Feedback(reviews))
         } yield resp
 
-      case GET -> Root / "reviews" :? RateVar(rate) :? OwnerVar(optName) =>
-        for {
-          reviews <- optName.fold(R.getReviewBy(rate))(name => R.getReviewBy(name, rate))
-          resp    <- Ok(Feedback(reviews))
-        } yield resp
+//      case GET -> Root / "reviews" :? RateVar(rate) :? OwnerVar(optName) =>
+//        for {
+//          reviews <- optName.fold(R.getReviewBy(rate))(name => R.getReviewBy(name, rate))
+//          resp    <- Ok(Feedback(reviews))
+//        } yield resp
     }
   }
 

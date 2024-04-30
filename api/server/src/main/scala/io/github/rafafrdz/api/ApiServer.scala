@@ -1,19 +1,21 @@
 package io.github.rafafrdz.api
 
-import cats.effect.Async
+import cats.effect.{Async, ExitCode}
+import cats.effect.kernel.Resource
 import cats.syntax.all._
 import com.comcast.ip4s._
+import io.github.rafafrdz.api.middleware.LoggerM
 import io.github.rafafrdz.api.repository.DB
 import io.github.rafafrdz.api.services.ReviewServices
 import org.http4s.HttpApp
 import org.http4s.ember.server.EmberServerBuilder
 import org.http4s.implicits._
-import org.http4s.server.middleware.Logger
+import org.http4s.server.Server
 import org.mongodb.scala.MongoClient
 
 object ApiServer {
 
-  def run[F[_]: Async](implicit conf: ApiConf): F[Nothing] = {
+  def build[F[_]: Async](implicit conf: ApiConf): Resource[F, Server] = {
     val client                            = DB[MongoClient]
     val reviewServices: ReviewServices[F] = ReviewServices.using[F](client)
     val httpApp: HttpApp[F] = (
@@ -22,15 +24,18 @@ object ApiServer {
     ).orNotFound
 
     val finalHttpApp: HttpApp[F] =
-      Logger.httpApp(logHeaders = true, logBody = true)(httpApp)
+      LoggerM.impl[F](showDetailedLogs = true)(httpApp)
     for {
-      _ <-
+      server <-
         EmberServerBuilder
           .default[F]
           .withHost(ipv4"0.0.0.0")
           .withPort(port"4321")
           .withHttpApp(finalHttpApp)
           .build
-    } yield ()
-  }.useForever
+    } yield server
+  }
+
+def run[F[_]: Async](implicit conf: ApiConf): F[ExitCode] =
+    build.use(_ => Async[F].never.as(ExitCode.Success))
 }

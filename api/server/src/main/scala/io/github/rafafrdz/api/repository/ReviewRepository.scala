@@ -41,11 +41,11 @@ object ReviewRepository {
   /** Helper MongoDB methods */
   private def documentToReview(doc: Document): Review =
     Review(
-      doc.getInteger("id"),
+      doc.getInteger("_id"),
       doc.getString("owner"),
-      doc.getString("adress"),
+      doc.getString("address"),
       doc.getDouble("rate"),
-      doc.getString("review")
+      doc.getString("comment")
     )
 
 }
