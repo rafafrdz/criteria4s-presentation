@@ -1,7 +1,7 @@
 package io.github.rafafrdz.api
 
-import cats.effect.{Async, ExitCode}
 import cats.effect.kernel.Resource
+import cats.effect.{Async, ExitCode}
 import cats.syntax.all._
 import com.comcast.ip4s._
 import io.github.rafafrdz.api.middleware.LoggerM
@@ -36,6 +36,6 @@ object ApiServer {
     } yield server
   }
 
-def run[F[_]: Async](implicit conf: ApiConf): F[ExitCode] =
+  def run[F[_]: Async](implicit conf: ApiConf): F[ExitCode] =
     build.use(_ => Async[F].never.as(ExitCode.Success))
 }

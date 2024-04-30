@@ -30,7 +30,9 @@ object ReviewServices {
   private def rateCriteria[D <: CriteriaTag: GT: Sym](rate: Double): Criteria[D] =
     col[D]("rate") gt lit(rate)
 
-  def build[F[_] : Logger, D <: CriteriaTag: EQ: GT: Sym: AND](rep: ReviewRepository[F]): ReviewServices[F] =
+  def build[F[_]: Logger, D <: CriteriaTag: EQ: GT: Sym: AND](
+      rep: ReviewRepository[F]
+  ): ReviewServices[F] =
     new ReviewServices[F] {
 
       override def getAllReviews: F[Seq[Review]] =
@@ -46,7 +48,7 @@ object ReviewServices {
         rep.getReviewBy(ownerCriteria(owner) and rateCriteria(rate))
     }
 
-  def using[F[_]: Async : Logger](mongo: MongoClient): ReviewServices[F] =
+  def using[F[_]: Async: Logger](mongo: MongoClient): ReviewServices[F] =
     build[F, MongoDB](ReviewRepository.using(mongo))
 
 }
