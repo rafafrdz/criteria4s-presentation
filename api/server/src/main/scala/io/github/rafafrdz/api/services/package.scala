@@ -2,27 +2,18 @@ package io.github.rafafrdz.api
 
 import org.http4s.dsl.impl.{OptionalQueryParamDecoderMatcher, QueryParamDecoderMatcher}
 
-import scala.util.Try
-
 package object services {
 
-  object IDVar {
-    def unapply(string: String): Option[Int] =
-      if (string.nonEmpty) Try(string.toInt).toOption
-      else Option.empty
-  }
+  object RateVar extends QueryParamDecoderMatcher[Double]("rate") {
+    def check(string: String): Option[Double] =
+      string.toDoubleOption.filterNot(d => 0.0 <= d || d <= 5.0)
 
-  object DNIVar extends QueryParamDecoderMatcher[Int]("dni"){
-    def check(string: String): Option[Int] =
-      if (string.nonEmpty && string.length<=9) Try(string.toInt).toOption
-      else Option.empty
-
-    override def unapply(params: Map[String, collection.Seq[String]]): Option[Int] =
+    override def unapply(params: Map[String, collection.Seq[String]]): Option[Double] =
       for {
-        dniOpt <- super.unapply(params)
-        checkedDNIOption <- check(dniOpt.toString)
-      } yield checkedDNIOption
+        rateOpt   <- super.unapply(params)
+        validRate <- check(rateOpt.toString)
+      } yield validRate
   }
 
-  object UserNameVar extends OptionalQueryParamDecoderMatcher[String]("name")
+  object OwnerVar extends OptionalQueryParamDecoderMatcher[String]("owner")
 }

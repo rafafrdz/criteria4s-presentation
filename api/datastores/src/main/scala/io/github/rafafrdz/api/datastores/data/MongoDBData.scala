@@ -15,15 +15,15 @@ object MongoDBData extends App {
   // Replace the placeholder with your Atlas connection string
   val connectionString = "mongodb://admin:1234@localhost:27017"
 
-  val client: MongoClient    = getConnection(connectionString)
+  val client: MongoClient    = connection(connectionString)
   val dbName: String         = "airbnb"
   val collectionName: String = "reviews"
   val count: Long            = setUpData(client, dbName, collectionName)
 
   println(count)
 
-  def getConnection(connectionString: String): MongoClient = {
-    val mongoClient: MongoClient = MongoClient(connectionString)
+  def connection(uri: String): MongoClient = {
+    val mongoClient: MongoClient = MongoClient(uri)
     Try {
       Await.result(mongoClient.listDatabaseNames().toFuture(), Duration.Inf)
     } match {
@@ -67,7 +67,7 @@ object MongoDBData extends App {
   }
 
   def getData(db: String, collection: String): List[Document] = {
-    val source = scala.io.Source.fromResource(s"data/mongo/$db/$collection.json")
+    val source = scala.io.Source.fromResource(s"data/mongodb/$db/$collection.json")
     val lines  = source.getLines().toList
     source.close()
     lines.map(Document(_))

@@ -5,83 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="503850b6-7074-44ec-9e67-cfe641b9d2a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__ch_qos_logback_logback_classic_1_3_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__ch_qos_logback_logback_core_1_3_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__co_fs2_fs2_core_2_13_3_2_11_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__co_fs2_fs2_io_2_13_3_2_11_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_chuusai_shapeless_2_13_2_3_10_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_comcast_ip4s_core_2_13_3_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pureconfig_pureconfig_2_13_0_17_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pureconfig_pureconfig_core_2_13_0_17_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pureconfig_pureconfig_generic_2_13_0_17_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pureconfig_pureconfig_generic_base_2_13_0_17_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_propensive_magnolia_2_13_0_17_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_propensive_mercator_2_13_0_2_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_twitter_hpack_1_0_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_config_1_4_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_core_2_13_0_14_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_jawn_2_13_0_14_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_magnolia_derivation_2_13_0_7_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_circe_circe_numbers_2_13_0_14_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_estatico_newtype_2_13_0_4_4_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_github_rafafrdz_criteria4s_core_2_13_0_7_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_github_rafafrdz_criteria4s_sql_2_13_0_7_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__io_projectreactor_reactor_core_3_5_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_circe_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_core_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_crypto_2_13_0_2_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_dsl_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_ember_core_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_ember_server_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_jawn_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_http4s_http4s_server_2_13_0_23_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_log4s_log4s_2_13_1_10_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mongodb_bson_5_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mongodb_bson_record_codec_5_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mongodb_mongodb_driver_core_5_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mongodb_mongodb_driver_reactivestreams_5_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mongodb_scala_mongo_scala_bson_2_13_5_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_mongodb_scala_mongo_scala_driver_2_13_5_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_reactivestreams_reactive_streams_1_0_4_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_12_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_13_12_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scodec_scodec_bits_2_13_1_1_34_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_2_0_4_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_case_insensitive_2_13_1_2_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_core_2_13_2_8_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_effect_2_13_3_3_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_effect_kernel_2_13_3_3_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_effect_std_2_13_3_3_14_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_kernel_2_13_2_8_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_parse_2_13_0_3_8_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_jawn_fs2_2_13_2_2_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_jawn_parser_2_13_1_4_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_literally_2_13_1_0_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_log4cats_core_2_13_2_4_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_log4cats_slf4j_2_13_2_4_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_vault_2_13_3_2_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_2_13_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__tf_tofu_derevo_cats_2_13_0_13_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__tf_tofu_derevo_circe_magnolia_2_13_0_13_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__tf_tofu_derevo_core_2_13_0_13_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/api.datastores.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datastores/src/main/scala/io/github/rafafrdz/api/datastores/criterias/MongoDB.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/ReviewServices.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/api.api-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/api.api-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/api.criterias.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/api.server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/api.server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/criterias/src/main/scala/io/github/rafafrdz/api/criterias/instances/postgres/MongoDB.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Dependencies.scala" beforeDir="false" afterPath="$PROJECT_DIR$/project/Dependencies.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Version.scala" beforeDir="false" afterPath="$PROJECT_DIR$/project/Version.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastores/src/main/resources/data/mongo/airbnb/reviews.json" beforeDir="false" afterPath="$PROJECT_DIR$/datastores/src/main/resources/data/mongodb/airbnb/reviews.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastores/src/main/scala/io/github/rafafrdz/api/datastores/data/MongoDBData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/datastores/src/main/scala/io/github/rafafrdz/api/datastores/data/MongoDBData.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/mongodb/play/aa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiRoutes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiRoutes.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiServer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiServer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/model/User.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/model/Review.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/repository/UserRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/repository/ReviewRepository.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/HelloWorld.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/Jokes.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/UserService.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/package.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +47,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="api" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api" type="f1a62948:ProjectNode" />
+                <item name="server" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="api" type="f1a62948:ProjectNode" />
+                <item name="server" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -176,11 +126,11 @@
       <recent name="$PROJECT_DIR$/datastores" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/datastores/src/main/resources/data/mongodb" />
       <recent name="$PROJECT_DIR$/datastores/src/main/resources/data/mongo/airbnb" />
       <recent name="$PROJECT_DIR$/datastores/src/main/resources/data/mongo" />
       <recent name="$PROJECT_DIR$/criterias/src/main/scala" />
       <recent name="$PROJECT_DIR$/criterias/src/main" />
-      <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MongoDBData">
@@ -266,7 +216,7 @@
       <workItem from="1714304004978" duration="1533000" />
       <workItem from="1714387732633" duration="2162000" />
       <workItem from="1714418145938" duration="14271000" />
-      <workItem from="1714481222562" duration="534000" />
+      <workItem from="1714481222562" duration="7655000" />
     </task>
     <servers />
   </component>

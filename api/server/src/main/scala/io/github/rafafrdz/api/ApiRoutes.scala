@@ -2,52 +2,38 @@ package io.github.rafafrdz.api
 
 import cats.effect.Sync
 import cats.implicits._
+import io.github.rafafrdz.api.model.Feedback
 import io.github.rafafrdz.api.services._
 import org.http4s.HttpRoutes
+import org.http4s.circe.CirceEntityCodec.circeEntityEncoder
 import org.http4s.dsl.Http4sDsl
 
 object ApiRoutes {
 
-  def jokeRoutes[F[_]: Sync](J: Jokes[F]): HttpRoutes[F] = {
-    val dsl = new Http4sDsl[F]{}
+  def reviewRoutes[F[_]: Sync](R: ReviewServices[F]): HttpRoutes[F] = {
+    val dsl = new Http4sDsl[F] {}
     import dsl._
     HttpRoutes.of[F] {
-      case GET -> Root / "joke" =>
+
+      case GET -> Root / "reviews" =>
         for {
-          joke <- J.get
-          resp <- Ok(joke)
+          reviews <- R.getAllReviews
+          resp    <- Ok(Feedback(reviews))
+        } yield resp
+
+      case GET -> Root / "reviews" :? RateVar(rate) :? OwnerVar(optName) =>
+        for {
+          reviews <- optName.fold(R.getReviewBy(rate))(name => R.getReviewBy(name, rate))
+          resp    <- Ok(Feedback(reviews))
         } yield resp
     }
   }
 
-  def userRoutes[F[_]: Sync](U: UserService[F]): HttpRoutes[F] = {
-    val dsl = new Http4sDsl[F]{}
+  def pingRoutes[F[_]: Sync]: HttpRoutes[F] = {
+    val dsl = new Http4sDsl[F] {}
     import dsl._
-    HttpRoutes.of[F] {
-      case GET -> Root / "user" / IDVar(id) =>
-        for {
-          user <- U.getUserById(id)
-          resp <- Ok(user)
-        } yield resp
-
-      case GET -> Root / "user" :? UserNameVar(optName) :? DNIVar(dni) =>
-        for {
-          name <- optName
-          user <- U.getUserByNameDNI(name, dni)
-          resp <- Ok(user)
-        } yield resp
-    }
-  }
-
-  def helloWorldRoutes[F[_]: Sync](H: HelloWorld[F]): HttpRoutes[F] = {
-    val dsl = new Http4sDsl[F]{}
-    import dsl._
-    HttpRoutes.of[F] {
-      case GET -> Root / "hello" / name =>
-        for {
-          greeting <- H.hello(HelloWorld.Name(name))
-          resp <- Ok(greeting)
-        } yield resp
+    HttpRoutes.of[F] { case GET -> Root / "ping" =>
+      Ok("pong")
     }
   }
 }
