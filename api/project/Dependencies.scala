@@ -61,7 +61,8 @@ object Dependencies {
   }
 
   object database {
-    lazy val postgresql: ModuleID = "org.postgresql" % "postgresql" % Version.Postgres
+    lazy val postgresql: ModuleID = "org.postgresql"     % "postgresql"         % Version.Postgres
+    lazy val mongo: ModuleID      = "org.mongodb.scala" %% "mongo-scala-driver" % Version.Mongo
   }
 
 }

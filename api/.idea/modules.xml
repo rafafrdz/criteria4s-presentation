@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.iml" filepath="$PROJECT_DIR$/.idea/modules/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.api-build.iml" filepath="$PROJECT_DIR$/.idea/modules/api.api-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.criterias.iml" filepath="$PROJECT_DIR$/.idea/modules/api.criterias.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.datastores.iml" filepath="$PROJECT_DIR$/.idea/modules/api.datastores.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.server.iml" filepath="$PROJECT_DIR$/.idea/modules/api.server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/criterias.iml" filepath="$PROJECT_DIR$/.idea/modules/criterias.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server.iml" />

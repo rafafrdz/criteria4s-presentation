@@ -5,7 +5,7 @@ lazy val api =
   project
     .in(file("."))
     .disablePlugins(AssemblyPlugin)
-    .aggregate(criterias, server)
+    .aggregate(datastores, server)
     .settings(
       name := "api"
     )
@@ -32,14 +32,15 @@ lazy val server: Project =
       Universal / javaOptions ++= jvmSettings,
       run / javaOptions ++= localJvmSettings
     )
-    .dependsOn(criterias)
+    .dependsOn(datastores)
 
-lazy val criterias =
-  (project in file("criterias"))
+lazy val datastores =
+  (project in file("datastores"))
     .settings(
-      name := "criterias",
+      name := "datastores",
       libraryDependencies ++= Seq(
         criteria4s.core,
-        criteria4s.sql
+        criteria4s.sql,
+        database.mongo
       )
     )

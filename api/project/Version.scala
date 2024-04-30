@@ -19,5 +19,6 @@ object Version {
   lazy val ScalaTest: String       = "3.2.9"
   lazy val Fs2: String             = "3.9.3"
   lazy val Postgres: String        = "42.6.0"
+  lazy val Mongo: String           = "5.0.1"
   lazy val Criteria4s: String      = "0.7.3"
 }

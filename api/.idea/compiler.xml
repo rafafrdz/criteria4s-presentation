@@ -7,6 +7,7 @@
       <module name="api-presentation.criterias" options="-g:none" />
       <module name="api-presentation.server" options="-g:none" />
       <module name="api.criterias" options="-g:none" />
+      <module name="api.datastores" options="-g:none" />
       <module name="api.server" options="-g:none" />
     </option>
   </component>
