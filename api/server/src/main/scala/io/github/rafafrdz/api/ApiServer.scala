@@ -15,8 +15,8 @@ import org.http4s.server.Server
 object ApiServer {
 
   def build[F[_]: Async](implicit conf: ApiConf): Resource[F, Server] = {
-//    val client                            = DB[org.mongodb.scala.MongoClient] // Using MongoDB client
-    val client                            = DB[java.sql.Connection] // Using JDBC client
+    val client                            = DB[org.mongodb.scala.MongoClient] // Using MongoDB client
+//    val client                            = DB[java.sql.Connection] // Using JDBC client
     val reviewServices: ReviewServices[F] = ReviewServices.using[F](client)
     val httpApp: HttpApp[F] = (
       ApiRoutes.pingRoutes[F] <+>
