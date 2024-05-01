@@ -27,7 +27,9 @@ lazy val server: Project =
         pureconfig.pureconfig,
         tofu.cats,
         tofu.circe,
-        tofu.core
+        tofu.core,
+        database.mongo,
+        database.postgresql
       ),
       Universal / javaOptions ++= jvmSettings,
       run / javaOptions ++= localJvmSettings

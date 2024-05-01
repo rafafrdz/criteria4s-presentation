@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:15.2-alpine
+    container_name: postgres15.2
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=1234
+    ports:
+      - '5432:5432'
+    volumes:
+      # - ./data/pgsql:/var/lib/postgresql/data                        ## Uncomment it in order to get locally the psql configuration
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./sql:/raw/data

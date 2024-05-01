@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="503850b6-7074-44ec-9e67-cfe641b9d2a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/api.api-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/api.api-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/api.server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/api.server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiRoutes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiRoutes.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiServer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/ApiServer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/repository/ReviewRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/repository/ReviewRepository.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/ReviewServices.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/ReviewServices.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/scala/io/github/rafafrdz/api/services/package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +35,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="api" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="api" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="api" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -103,7 +89,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-1.8",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rafafrdz/git/github/criteria4s-presentation/api/datastores/src/main/resources/data",
+    "last_opened_file_path": "/home/rafafrdz/git/github/criteria4s-presentation/api/docker/postgresql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,6 +104,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker/postgresql" />
       <recent name="$PROJECT_DIR$/datastores/src/main/resources/data" />
       <recent name="$PROJECT_DIR$/datastores" />
     </key>
@@ -240,7 +227,7 @@
       <workItem from="1714304004978" duration="1533000" />
       <workItem from="1714387732633" duration="2162000" />
       <workItem from="1714418145938" duration="14271000" />
-      <workItem from="1714481222562" duration="13275000" />
+      <workItem from="1714481222562" duration="15239000" />
     </task>
     <servers />
   </component>
