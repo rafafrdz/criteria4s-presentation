@@ -1,6 +1,7 @@
 package io.github.rafafrdz.api.repository
 
 import cats.effect.Async
+import cats.effect.kernel.Resource
 import cats.implicits._
 import io.github.rafafrdz.api.model.Review
 import io.github.rafafrdz.criteria4s.core._
@@ -79,12 +80,18 @@ object ReviewRepository {
   private def execute[F[_]: Async, T](conn: Connection, sql: String)(
       F: ResultSet => T
   ): F[Seq[T]] =
-    conn.createStatement().executeQuery(sql).pure[F].map { rs =>
-      Iterator
-        .continually(rs)
-        .takeWhile(_.next())
-        .map(rs => F(rs))
-        .toSeq
+    Resource.make(Async[F].delay(conn.createStatement()))(s => Async[F].delay(s.close())).use {
+      stmt =>
+        stmt
+          .executeQuery(sql)
+          .pure[F]
+          .map { rs =>
+            Iterator
+              .continually(rs)
+              .takeWhile(_.next())
+              .map(F)
+              .toSeq
+          }
     }
 
   private def resultSetToReview(rs: ResultSet): Review =
