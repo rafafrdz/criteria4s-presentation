@@ -1,14 +1,11 @@
 import Build.*
 import Dependencies.*
 
-lazy val api =
+lazy val api: Project =
   project
     .in(file("."))
     .disablePlugins(AssemblyPlugin)
     .aggregate(datastores, server)
-    .settings(
-      name := "api"
-    )
 
 lazy val server: Project =
   (project in file("server"))

@@ -11,12 +11,12 @@ import org.http4s.HttpApp
 import org.http4s.ember.server.EmberServerBuilder
 import org.http4s.implicits._
 import org.http4s.server.Server
-import org.mongodb.scala.MongoClient
 
 object ApiServer {
 
   def build[F[_]: Async](implicit conf: ApiConf): Resource[F, Server] = {
-    val client                            = DB[MongoClient]
+//    val client                            = DB[org.mongodb.scala.MongoClient] // Using MongoDB client
+    val client                            = DB[java.sql.Connection] // Using JDBC client
     val reviewServices: ReviewServices[F] = ReviewServices.using[F](client)
     val httpApp: HttpApp[F] = (
       ApiRoutes.pingRoutes[F] <+>

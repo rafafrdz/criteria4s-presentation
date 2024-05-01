@@ -6,5 +6,13 @@ case class ApiConf(db: DBConfig)
 
 object ApiConf {
 
-  case class DBConfig(host: String, port: Int, user: String, password: String)
+  case class DBConfig(
+      prefix: String,
+      host: String,
+      port: Int,
+      user: String,
+      password: String,
+      database: String = "",
+      driver: String = ""
+  )
 }
