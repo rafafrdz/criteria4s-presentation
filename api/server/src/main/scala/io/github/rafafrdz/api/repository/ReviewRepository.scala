@@ -6,6 +6,8 @@ import io.github.rafafrdz.api.model.Review
 import io.github.rafafrdz.criteria4s.core._
 import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
 
+import scala.util.Try
+
 trait ReviewRepository[F[_]] {
 
   def getReviews: F[Seq[Review]]
@@ -39,12 +41,16 @@ object ReviewRepository {
     }
 
   /** Helper MongoDB methods */
+
+  private def getAsDouble(key: String, doc: Document): Double =
+    Try(doc.getDouble(key).toDouble).getOrElse(doc.getInteger(key).toDouble)
+
   private def documentToReview(doc: Document): Review =
     Review(
       doc.getInteger("_id"),
       doc.getString("owner"),
       doc.getString("address"),
-      doc.getDouble("rate"),
+      getAsDouble("rate", doc),
       doc.getString("comment")
     )
 
