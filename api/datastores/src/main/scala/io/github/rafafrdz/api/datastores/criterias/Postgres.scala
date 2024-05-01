@@ -4,7 +4,7 @@ import io.github.rafafrdz.criteria4s.core._
 import io.github.rafafrdz.criteria4s.instances._
 import io.github.rafafrdz.criteria4s.sql.{SQL, _}
 
-trait Postgres  extends SQL
+trait Postgres extends SQL
 object Postgres extends SQLExpr[Postgres] {
 
   val C: String => String                     = s => s"$s"
