@@ -19,7 +19,7 @@
             <pattern>%highlight(%date{HH:mm:ss.SSS} %-5level %-50.50([%logger{50}])) - %msg%n</pattern>
         </encoder>
     </appender>
-    <root level="${LOG_LEVEL:-DEBUG}" additivity="false">
+    <root level="${LOG_LEVEL:-INFO}" additivity="false">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

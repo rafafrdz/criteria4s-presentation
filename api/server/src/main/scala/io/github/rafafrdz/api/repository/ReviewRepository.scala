@@ -5,6 +5,7 @@ import cats.implicits._
 import io.github.rafafrdz.api.model.Review
 import io.github.rafafrdz.criteria4s.core._
 import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+import org.typelevel.log4cats.Logger
 
 import scala.util.Try
 
@@ -18,7 +19,7 @@ trait ReviewRepository[F[_]] {
 
 object ReviewRepository {
 
-  def using[F[_]: Async](mongo: MongoClient): ReviewRepository[F] =
+  def using[F[_]: Async: Logger](mongo: MongoClient): ReviewRepository[F] =
     new ReviewRepository[F] {
 
       def db: MongoDatabase                     = mongo.getDatabase("airbnb")
@@ -30,14 +31,14 @@ object ReviewRepository {
           reviews = docs.map(documentToReview)
         } yield reviews
 
-      override def getReviewBy[D <: CriteriaTag](criteria: Criteria[D]): F[Seq[Review]] = {
+      override def getReviewBy[D <: CriteriaTag](criteria: Criteria[D]): F[Seq[Review]] =
         for {
+          _ <- Logger[F].info(s"Searching reviews by criteria: $criteria")
           docs <- Async[F].fromFuture(
             collection.find(Document(criteria.toString())).toFuture().pure[F]
           )
           reviews = docs.map(documentToReview)
         } yield reviews
-      }
     }
 
   /** Helper MongoDB methods */

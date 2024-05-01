@@ -24,7 +24,7 @@ object ApiServer {
     ).orNotFound
 
     val finalHttpApp: HttpApp[F] =
-      LoggerM.impl[F](showDetailedLogs = true)(httpApp)
+      LoggerM.impl[F](showDetailedLogs = false, logHeaders = false, logBodys = false)(httpApp)
     for {
       server <-
         EmberServerBuilder
